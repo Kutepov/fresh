@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fresh.buzz/uploads/sitemap/index.xml

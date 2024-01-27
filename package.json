@@ -1,0 +1,18 @@
+{
+  "name": "fresh",
+  "version": "1.0.0",
+  "description": "fresh",
+  "license": "ISC",
+  "dependencies": {
+    "natives": "^1.1.6"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-replace": "^1.0.0",
+    "gulp-rename": "*",
+    "gulp-uglify": "^2.1.0",
+    "gulp-git": "*"
+  }
+}

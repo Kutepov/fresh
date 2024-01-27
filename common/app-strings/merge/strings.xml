@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="_empty" translatable="false" />
+
+    <string name="app_name" translatable="false">fresh</string>
+
+    <!--Global-->
+    <string name="loading" translatable="false">Загрузка…</string>
+    <string name="canceled" translatable="false">Отменено</string>
+    <string name="sign_in" translatable="false">Войти</string>
+    <string name="sign_out" translatable="false">Выход</string>
+    <string name="auth" translatable="false">Авторизация</string>
+    <string name="loading_completed" translatable="false">Загрузка завершена</string>
+    <string name="success" translatable="false">Успех!</string>
+    <string name="skip" translatable="false">Пропустить</string>
+    <string name="empty_list" translatable="false">Список пуст…</string>
+
+    <!--Hints-->
+    <string name="hint_email" translatable="false">Email</string>
+    <string name="hint_password" translatable="false">Пароль</string>
+    <string name="hint_new_password" translatable="false">Новый пароль</string>
+    <string name="hint_old_password" translatable="false">Старый пароль</string>
+    <string name="hint_confirm_password" translatable="false">Подтвердите пароль</string>
+
+    <!--Errors-->
+    <string name="error_field_required" translatable="false">Обязательное поле</string>
+    <string name="error_wrong_email" translatable="false">Неверный email</string>
+    <string name="error_wrong_password" translatable="false">Пароль должен содержать не менее восьми символов</string>
+    <string name="error_password_confirmation" translatable="false">Пароли не совпадают</string>
+    <string name="error_unknown" translatable="false">Неизвестная ошибка</string>
+    <string name="error_connection" translatable="false">Ошибка соединения. Проверьте наличие интернет подключения и повторите попытку</string>
+    <string name="error_loading" translatable="false">Ошибка загрузки</string>
+
+    <!--Content Descriptions-->
+    <string name="profile_image" translatable="false">Изображение профиля</string>
+
+    <string name="pattern_percentage" translatable="false">%d%%</string>
+
+    <!--Waiting for translate-->
+    <string name="comments_count" translatable="false">Комментарий</string>
+    <string name="write_a_comment" translatable="false">Написать комментарий…</string>
+    <string name="profile" translatable="false">Профиль</string>
+    <string name="not_authorized" translatable="false">Не авторизован</string>
+    <string name="authorized" translatable="false">Авторизован</string>
+    <string name="authorize" translatable="false">Авторизоваться</string>
+
+
+    <string name="choice_of_country" translatable="false">Выбор страны (тестовые билды)</string>
+    <string name="settings_profile_label" translatable="false">Профиль</string>
+
+    <string name="sing_in" translatable="false">Вход</string>
+    <string name="sing_up" translatable="false">Регистрация</string>
+    <string name="auth_description" translatable="false">Откройте доступ ко всем функциям приложения</string>
+    <string name="hint_input_name" translatable="false">Ваше имя</string>
+    <string name="hint_input_email" translatable="false">Ваш E-mail</string>
+    <string name="hint_input_password" translatable="false">Пароль</string>
+    <string name="hint_input_password_repeat" translatable="false">Повтор пароля</string>
+    <string name="hint_input_new_password" translatable="false">Новый пароль</string>
+    <string name="hint_input_new_password_repeat" translatable="false">Повтор нового пароля</string>
+    <string name="hint_input_code" translatable="false">Код подтверждения</string>
+    <string name="button_continue" translatable="false">Продолжить</string>
+    <string name="forgot_password" translatable="false">Забыли пароль?</string>
+    <string name="or" translatable="false">или</string>
+    <string name="continue_with_google" translatable="false">Продолжить с Google</string>
+    <string name="continue_with_facebook" translatable="false">Продолжить с Facebook</string>
+    <string name="no_account" translatable="false">Нет учетной записи?</string>
+    <string name="do_you_have_an_account" translatable="false">Есть учетная запись?</string>
+    <string name="register" translatable="false">Зарегистрироваться</string>
+    <string name="no_name" translatable="false">Без имени</string>
+    <string name="activated" translatable="false">Активирован</string>
+    <string name="is_not_activated" translatable="false">Не активирован</string>
+    <string name="edit_profile" translatable="false">Редактировать</string>
+    <string name="logout" translatable="false">Выйти</string>
+    <string name="comments_cap" translatable="false">Тут вы сможете увидеть оставленные вами комментарии к новостям</string>
+    <string name="please_enter_your_username" translatable="false">Пожалуйста, введите Ваше имя</string>
+    <string name="activation_user_title" translatable="false">Активация аккаунта</string>
+    <string name="activation_user_description" translatable="false">На Ваш E-mail было отправлено письмо с кодом подтверждения для активации.</string>
+    <string name="change_password_title" translatable="false">Восстановление пароля</string>
+    <string name="password_changed" translatable="false">Пароль изменён!</string>
+    <string name="login" translatable="false">Вход.</string>
+    <string name="for_registered_users" translatable="false">Для зарегистрированных пользователей</string>
+    <string name="did_not_receive_a_letter" translatable="false">Не пришло письмо?</string>
+    <string name="send_again" translatable="false">Отправить снова</string>
+    <string name="new_password" translatable="false">Пожалуйста, введите новый пароль</string>
+    <string name="code_sent_to_mail" translatable="false">На Ваш E-mail отправлено письмо с кодом подтверждения.</string>
+    <string name="account_confirmed" translatable="false">Ваш аккаунт успешно подтвержден!</string>
+    <string name="please_enter_your_email" translatable="false">Пожалуйста, введите Ваш E-mail</string>
+    <string name="code_password_recovery" translatable="false">На ваш E-mail адрес было отправлено письмо с кодом подтверждения для восстановления пароля.</string>
+    <string name="upload_avatar" translatable="false">Загрузить аватар</string>
+    <string name="delete_avatar" translatable="false">Удалить аватар</string>
+
+
+
+
+</resources>

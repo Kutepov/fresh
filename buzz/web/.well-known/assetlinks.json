@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.freshnews.fresh",
+    "sha256_cert_fingerprints":
+    ["1B:C4:AD:5A:8B:F9:61:FE:1A:16:BD:C5:FC:CE:61:4B:E4:6A:63:7F:CE:66:B8:1C:7A:7F:44:2F:38:F8:BC:79", "6F:07:05:43:E6:41:3F:D9:F3:EA:E7:FC:FF:5D:17:EC:38:BB:FE:B4:CF:69:09:2F:FD:FA:F7:29:8E:D1:00:4C"]
+  }
+}]

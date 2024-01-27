@@ -1,0 +1,22 @@
+<?php
+return [
+    'E-mail' => 'E-mail',
+    'Share on {service}' => 'Chia sẻ trên {service}',
+    'Имя' => 'Tên',
+    'Отправить' => 'Gửi',
+    'Появились вопросы? Мы ответим на них в самый короткий срок' => 'Có câu hỏi? Chúng tôi sẽ trả lời trong thời gian ngắn nhất',
+    'Сообщение' => 'Tin nhắn',
+    '{count, plural, one{# комментарий} few{# комментария} other{# комментариев}}' => '{count, plural, one{# bình luận} few{# bình luận} other{# bình luận}}',
+    'Горячие новости' => 'Tin nóng',
+    'Комментариев нет' => 'Không có bình luận',
+    'Ничего не найдено...' => 'Không tìm thấy gì...',
+    'Показать {count, plural, one{# ответ} few{# ответа} other{# ответов}}' => 'Hiển thị {count, plural, one{# phản hồi} few{# phản hồi} other{# phản hồi}}',
+    'Политика конфиденциальности' => 'Chính sách bảo mật',
+    'Связаться с нами' => 'Liên hệ với chúng tôi',
+    'Установить' => 'Cài đặt',
+    'Читайте новости в приложении. Экономьте трафик!' => 'Đọc tin tức trong ứng dụng. Tiết kiệm lưu lượng!',
+    'Читайте также' => 'Đọc thêm',
+    'Читать далее' => 'Đọc tiếp',
+    'вчера' => 'hôm qua',
+    'сегодня' => 'hôm nay',
+];

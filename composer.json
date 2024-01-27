@@ -1,0 +1,144 @@
+{
+  "name": "yiisoft/yii2-app-advanced",
+  "description": "Yii 2 Advanced Project Template",
+  "keywords": [
+    "yii2",
+    "framework",
+    "advanced",
+    "project template"
+  ],
+  "homepage": "http://www.yiiframework.com/",
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+    "forum": "http://www.yiiframework.com/forum/",
+    "wiki": "http://www.yiiframework.com/wiki/",
+    "irc": "irc://irc.freenode.net/yii",
+    "source": "https://github.com/yiisoft/yii2"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.2",
+    "ext-pcntl": "*",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "yiisoft/yii2": "~2.0.14",
+    "yiisoft/yii2-bootstrap": "~2.0.0",
+    "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+    "yiisoft/yii2-queue": "^2.3",
+    "yiisoft/yii2-redis": "^2.0",
+    "yiisoft/yii2-shell": "^2.0",
+    "symfony/dom-crawler": "^5.0",
+    "guzzlehttp/guzzle": "^7.0",
+    "beberlei/assert": "^3.2",
+    "enqueue/amqp-lib": "^0.10.4",
+    "true/punycode": "~2.0",
+    "nesbot/carbon": "^2.32",
+    "omnilight/yii2-scheduling": "*",
+    "voskobovich/yii2-linker-behavior": "^4.0",
+    "2amigos/yii2-ckeditor-widget": "@dev",
+    "kartik-v/yii2-widget-activeform": "@dev",
+    "kartik-v/yii2-widget-select2": "@dev",
+    "kartik-v/yii2-grid": "@dev",
+    "kartik-v/yii2-widget-datepicker": "*",
+    "kartik-v/yii2-date-range": "dev-master",
+    "kartik-v/yii2-nav-x": "*",
+    "kartik-v/yii2-tabs-x": "*",
+    "warrence/yii2-kartikgii": "dev-master",
+    "yeesoft/yii2-multilingual": "*",
+    "ramsey/uuid": "^4.1",
+    "jms/serializer": "^3.10",
+    "haydenpierce/class-finder": "^0.4.2",
+    "doctrine/annotations": "^1.11",
+    "jenner/simple_fork": "^1.2",
+    "alexeyshockov/guzzle-dynamic-pool": "^0.3.1",
+    "yiisoft/yii2-elasticsearch": "~2.1.0",
+    "kevinrob/guzzle-cache-middleware": "^3.3",
+    "react/cache": "^1.1",
+    "doctrine/cache": "^1.10",
+    "yii-dream-team/yii2-lockable-activerecord": "*",
+    "sergeymakinen/yii2-telegram-log": "^2.0",
+    "aporat/store-receipt-validator": "^4.0",
+    "elasticsearch/elasticsearch": "^7.10",
+    "google/apiclient": "^2.8",
+    "yii2mod/yii2-behaviors": "*",
+    "urbanindo/yii2-json-log-file-target": "2.0.14.1",
+    "symfony/css-selector": "^5.2",
+    "symfony/yaml": "^5.2",
+    "predis/predis": "^1.1",
+    "aws/aws-sdk-php": "^3.174",
+    "yiithings/yii2-dotenv": "*",
+    "codemix/yii2-localeurls": "^1.8",
+    "yiisoft/yii2-authclient": "^2.2",
+    "deployer/deployer": "^6.8",
+    "unclead/yii2-multiple-input": "~2.0",
+    "tooltipster/tooltipster": "^4.2",
+    "kartik-v/yii2-editable": "@dev",
+    "intervention/image": "^2.7",
+    "yii2mod/yii2-settings": "*",
+    "edamov/pushok": "dev-master",
+    "paragraph1/php-fcm": "dev-master",
+    "lasserafn/php-initial-avatar-generator": "^4.2",
+    "himiklab/yii2-sortable-grid-view-widget": "*",
+    "kop/yii2-scroll-pager": "dev-master",
+    "mobiledetect/mobiledetectlib": "^2.8",
+    "google/cloud-translate": "^1.12",
+    "manchenkov/yii2-recaptcha3": "^1.0",
+    "samdark/sitemap": "^2.4"
+  },
+  "require-dev": {
+    "yiisoft/yii2-debug": "~2.1.0",
+    "yiisoft/yii2-gii": "~2.1.0",
+    "yiisoft/yii2-faker": "~2.0.0",
+    "codeception/codeception": "^4.0",
+    "codeception/module-asserts": "^1.0",
+    "codeception/module-yii2": "^1.0",
+    "codeception/module-filesystem": "^1.0",
+    "codeception/verify": "~0.5.0 || ~1.1.0",
+    "bazilio/yii2-stubs-generator": "^1.6",
+    "squizlabs/php_codesniffer": "3.*"
+  },
+  "scripts": {
+    "phpcs": "phpcs --standard=ruleset.xml --extensions=php"
+  },
+  "config": {
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org",
+      "options": {
+        "ssl": {
+          "verify_peer": false
+        }
+      }
+    },
+    {
+      "type": "path",
+      "url": "./common/components/pushok"
+    },
+    {
+      "type": "path",
+      "url": "./common/components/fcm"
+    },
+    {
+      "type": "path",
+      "url": "./common/components/multilingual/src/yii2-multilingual"
+    },
+    {
+      "type": "path",
+      "url": "./common/components/yii2-sortable-grid-view-widget-master"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "common\\components\\scrapers\\sources\\": "common/components/scrapers/sources/"
+    }
+  }
+}

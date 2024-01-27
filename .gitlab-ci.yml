@@ -1,0 +1,67 @@
+image: rcrtv/toolbox
+
+stages:
+  - build
+  - deploy
+  - rollback
+
+build:prod:composer:
+  stage: build
+  only:
+    - master
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-build
+    paths:
+      - vendor
+  script:
+    - composer install --no-interaction --no-progress --no-dev --ignore-platform-reqs --optimize-autoloader --no-scripts --no-plugins
+
+#deploy:prod:
+#  stage: deploy
+#  when: manual
+#  only:
+#    - master
+#  environment:
+#    name: production
+#    url: https://api2.myfresh.app
+#  script:
+#    - eval $(ssh-agent -s)
+#    - echo -n "$PROD_KEY" | ssh-add -
+#    - ssh -o StrictHostKeyChecking=no myfresh@$PROD_IP api2
+
+deploy:prod:deployer:
+  stage: deploy
+#  when: manual
+  allow_failure: false
+  only:
+    - master
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-build
+    paths:
+      - vendor
+    policy: pull
+  environment:
+    name: production
+    url: https://api2.myfresh.app/
+  script:
+    - eval $(ssh-agent -s)
+    - echo -n "$PROD_KEY" | ssh-add -
+    - vendor/bin/dep -n -f .deployer.php deploy prod
+
+rollback:prod:deployer:
+  stage: rollback
+  when: manual
+  only:
+    - master
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-build
+    paths:
+      - vendor
+    policy: pull
+  environment:
+    name: production
+    url: https://api2.myfresh.app/
+  script:
+    - eval $(ssh-agent -s)
+    - echo -n "$PROD_KEY" | ssh-add -
+    - vendor/bin/dep -n -f .deployer.php rollback prod

@@ -1,0 +1,25 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "8529S2466P.com.freshnews.fresh"
+        ],
+        "paths": [
+          "*",
+          "NOT */privacy-policy"
+        ],
+        "components": [
+          {
+            "/": "*"
+          },
+          {
+            "/": "*/privacy-policy*",
+            "exclude": true
+          }
+        ]
+      }
+    ]
+  }
+}

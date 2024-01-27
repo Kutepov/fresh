@@ -1,0 +1,121 @@
+version: '3.2'
+
+services:
+  console:
+    build: console
+    volumes:
+      - ./:/app
+      - ./_docker/data/php-spx:/tmp/spx
+      - ./_docker/conf/php/php.ini:/usr/local/etc/php/conf.d/custom.ini
+
+#  php-spx:
+#    image: 8ct8pus/php-spx-alpine
+#    ports:
+#      - 99:80
+#    volumes:
+#      - ./_docker/data/php-spx:/tmp/spx
+
+  frontend:
+    build: frontend
+    ports:
+      - 20080:80
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./:/app
+
+  buzz:
+    build: buzz
+    ports:
+      - 23080:80
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./:/app
+
+  backend:
+    build: backend
+    ports:
+      - 21080:80
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./:/app
+
+  api:
+    build: api
+    ports:
+      - 22080:80
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./:/app
+
+  redis:
+    image: redis:5-alpine
+    volumes:
+      - ./_docker/data/redis:/data
+
+  mysql:
+    image: mysql:8.0.34
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      - MYSQL_ROOT_PASSWORD=verysecret
+      - MYSQL_DATABASE=fresh
+      - MYSQL_USER=fresh
+      - MYSQL_PASSWORD=fresh
+    ports:
+      - 33061:3306
+    volumes:
+      - ./_docker/conf/mysql:/etc/mysql/conf.d
+      - ./_docker/data/mysql:/var/lib/mysql
+    security_opt:
+      - seccomp:unconfined
+
+#  rabbitmq:
+#    image: rabbitmq:3-management
+#    hostname: rabbitmq
+#    environment:
+#      RABBITMQ_DEFAULT_USER: "rabbitmq"
+#      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+#    volumes:
+#      - ./_docker/data/rabbitmq:/var/lib/rabbitmq
+#    ports:
+#      - 5672:5672
+#      - 15672:15672
+
+###  queue-common:
+###    build: _docker/build/queue
+###    depends_on:
+###      - rabbitmq
+###    environment:
+###      WORKDIR: /app
+###      COMMAND: /app/yii queue/listen
+###      WORKERS: 16
+###    volumes:
+###      - ./_docker/conf/php/php.ini:/usr/local/etc/php/conf.d/custom.ini
+###      - ./:/app
+##
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.8.12
+    volumes:
+      - ./_docker/data/elasticsearch:/usr/share/elasticsearch/data
+      - ./_docker/conf/elasticsearch/hunspell:/usr/share/elasticsearch/config/hunspell
+    environment:
+      - node.name=es01
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - indices.analysis.hunspell.dictionary.lazy=true
+      - cluster.routing.allocation.disk.watermark.low=30mb
+      - cluster.routing.allocation.disk.watermark.high=20mb
+      - cluster.routing.allocation.disk.watermark.flood_stage=10mb
+      - cluster.routing.allocation.disk.threshold_enabled=false
+      - cluster.info.update.interval=1m
+      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 9200:9200
+
+  elastichq:
+    image: elastichq/elasticsearch-hq
+    ports:
+      - 5001:5000
